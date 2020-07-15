@@ -1,7 +1,7 @@
 # AzureProject
 Practice Azure DevOps
 
-** Implemented CI/CD **
+**Implemented CI/CD**
 
 - Each git 'push' run Test -> Build -> Package for deploy -> Upload into production (Azure Cloud environment)
 
