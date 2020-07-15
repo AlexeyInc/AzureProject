@@ -42,6 +42,7 @@ namespace SimpleAPI.Controllers
         }
 
         [HttpGet]
+        [Route("/number")]
         public int GetMultiplyNumber(int num)
         {
             return num * 2;
