@@ -20,6 +20,7 @@ namespace SimpleAPI.Controllers
 
         public WeatherForecastController()
         {
+            //
         }
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger) : this()
