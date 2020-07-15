@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using SimpleAPI.Models;
 
 namespace SimpleAPI.Controllers
 {
@@ -18,12 +19,7 @@ namespace SimpleAPI.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController()
-        {
-            //
-        }
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger) : this()
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
         }
@@ -42,10 +38,26 @@ namespace SimpleAPI.Controllers
         }
 
         [HttpGet]
-        [Route("/number")]
+        [Route("number/{num}")]
         public int GetMultiplyNumber(int num)
         {
             return num * 2;
+        }
+         
+        [HttpGet]
+        [Route("coupleNumbers")]
+        public int? GetComplexObj([FromQuery] MyNumbers myNumbers)
+        {
+            var result = myNumbers.NumOne + myNumbers.NumTwo;
+            return result;
+        }
+
+        [HttpGet]
+        [Route("coupleNumbersFromBody")]
+        public int? GetComplexObjFromBody(MyNumbers myNumbers)
+        {
+            var result = myNumbers.NumOne + myNumbers.NumTwo;
+            return result;
         }
     }
 }
