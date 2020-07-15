@@ -59,5 +59,14 @@ namespace SimpleAPI.Controllers
             var result = myNumbers.NumOne + myNumbers.NumTwo;
             return result;
         }
+
+        [HttpGet]
+        [Route("~/")]
+        public JsonResult GetMyPersonalData()
+        {
+            return new JsonResult(
+                new { Name = "Alexey", Age = 23, Hobbies = "IT, Chill out" }
+                );
+        }
     }
 }
