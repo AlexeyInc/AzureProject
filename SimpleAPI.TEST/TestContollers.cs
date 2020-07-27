@@ -6,22 +6,22 @@ using Microsoft.Extensions.Logging;
 
 namespace SimpleAPI.TEST
 {
-    public class TestContoroller
+    public class TestContollers
     {
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<NumberController> _logger;
 
-        private readonly WeatherForecastController _weatherForecast;
+        private readonly NumberController _numbersController;
 
-        public TestContoroller()
+        public TestContollers()
         {
             var serviceProvider = new ServiceCollection()
                 .AddLogging()
                 .BuildServiceProvider();
 
             var factory = serviceProvider.GetService<ILoggerFactory>();
-            var _logger = factory.CreateLogger<WeatherForecastController>();
+            var _logger = factory.CreateLogger<NumberController>();
 
-            _weatherForecast = new WeatherForecastController(_logger);
+            _numbersController = new NumberController();
 
             _logger.LogInformation("End of the MyCtor <- LogInformation"); 
 
@@ -30,8 +30,8 @@ namespace SimpleAPI.TEST
         [Fact]
         public void Test1()
         {
-            var result = _weatherForecast.GetMultiplyNumber(9);
-            Assert.Equal(18, result); 
+            var result = _numbersController.GetMultiplyNumber(9);
+            Assert.Equal(18, result.Value); 
 
             // _logger.LogDebug("Test is finish"); // here _logger is null
         }

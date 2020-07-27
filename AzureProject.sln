@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAPI", "SimpleAPI\SimpleAPI.csproj", "{0E54D033-F619-4B67-9444-5805A85AF75A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI", "SimpleAPI\SimpleAPI.csproj", "{0E54D033-F619-4B67-9444-5805A85AF75A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAPI.TEST", "SimpleAPI.TEST\SimpleAPI.TEST.csproj", "{D6FF98D2-FE22-42D3-96FE-40BD32CA6924}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI.TEST", "SimpleAPI.TEST\SimpleAPI.TEST.csproj", "{D6FF98D2-FE22-42D3-96FE-40BD32CA6924}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAzureFunction", "SimpleAzureFunction\SimpleAzureFunction.csproj", "{2C0808CA-B641-4A7A-8A64-16BA31DEE426}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureQueueLibrary", "AzureQueueLibrary\AzureQueueLibrary.csproj", "{6D0090AD-9572-46A4-ADA7-39824B95FBF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{D6FF98D2-FE22-42D3-96FE-40BD32CA6924}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6FF98D2-FE22-42D3-96FE-40BD32CA6924}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6FF98D2-FE22-42D3-96FE-40BD32CA6924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0808CA-B641-4A7A-8A64-16BA31DEE426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0808CA-B641-4A7A-8A64-16BA31DEE426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0808CA-B641-4A7A-8A64-16BA31DEE426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0808CA-B641-4A7A-8A64-16BA31DEE426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D0090AD-9572-46A4-ADA7-39824B95FBF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D0090AD-9572-46A4-ADA7-39824B95FBF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D0090AD-9572-46A4-ADA7-39824B95FBF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D0090AD-9572-46A4-ADA7-39824B95FBF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

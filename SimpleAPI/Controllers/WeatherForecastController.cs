@@ -9,7 +9,7 @@ using SimpleAPI.Models;
 namespace SimpleAPI.Controllers
 {
     [ApiController]
-    [Route("api")]
+    [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -35,38 +35,6 @@ namespace SimpleAPI.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
-        }
-
-        [HttpGet]
-        [Route("number/{num}")]
-        public int GetMultiplyNumber(int num)
-        {
-            return num * 2;
-        }
-         
-        [HttpGet]
-        [Route("coupleNumbers")]
-        public int? GetComplexObj([FromQuery] MyNumbers myNumbers)
-        {
-            var result = myNumbers.NumOne + myNumbers.NumTwo;
-            return result;
-        }
-
-        [HttpGet]
-        [Route("coupleNumbersFromBody")]
-        public int? GetComplexObjFromBody(MyNumbers myNumbers)
-        {
-            var result = myNumbers.NumOne + myNumbers.NumTwo;
-            return result;
-        }
-
-        [HttpGet]
-        [Route("~/")]
-        public JsonResult GetMyPersonalData()
-        {
-            return new JsonResult(
-                new { Name = "Alexey", Age = 23, Hobbies = "IT, Chill out" }
-                );
         }
     }
 }
