@@ -1,7 +1,10 @@
 # AzureProject
-Practice Azure DevOps
+Practice Azure services and DevOps
 
-**Implemented CI/CD**
+The aim of this project is to get some basic experience with Azure technologies like Azure Storage Types, Azure Functions etc. 
+And also publishing and make CI/CD in Azure DevOps
+
+**CI/CD**
 
 - Each git 'push' run Test -> Build -> Package for deploy -> Upload into production (Azure Cloud environment)
 
